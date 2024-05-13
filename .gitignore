@@ -133,3 +133,6 @@ dmypy.json
 out
 3rdParty
 initmodel
+
+demo/tmp
+demo/openscene_features
