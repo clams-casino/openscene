@@ -9,12 +9,12 @@ MATTERPORT_LABELS_21 = ('wall', 'floor', 'cabinet', 'bed', 'chair', 'sofa', 'tab
                     'window', 'bookshelf', 'picture', 'counter', 'desk', 'curtain', 'refrigerator',
                     'shower curtain', 'toilet', 'sink', 'bathtub', 'other', 'ceiling')
 
-MATTERPORT_LABELS_REGIONS = ('bathroom', 'bedroom', 'closet', 'dining room', 'entryway/foyer/lobby', 
-                             'garage', 'hallway', 'library', 'laundryroom/mudroom', 'kitchen', 
-                             'living room', 'meetingroom/conferenceroom', 'office', 
-                             'porch/terrace/deck/driveway', 'rec/game', 'stairs', 'utilityroom/toolroom', 
-                             'tv', 'workout/gym/exercise', 'outdoor', 'balcony', 'bar', 'classroom', 'dining booth', 
-                             'spa/sauna', 'other room', 'junk', 'no label',
+MATTERPORT_LABELS_REGIONS = ('bathroom', 'bedroom', 'closet', 'dining room', 'entryway or foyer or lobby', 
+                             'garage', 'hallway', 'library', 'laundry room or mudroom', 'kitchen', 
+                             'living room', 'meeting room or conference room', 'office', 
+                             'porch or terrace or deck or driveway', 'rec/game', 'stairs', 'utility room or tool room', 
+                             'cinema or home theater or theater"', 'gym', 'outdoor', 'balcony', 'bar', 'classroom', 'dining booth', 
+                             'spa or sauna', 'other room', 'junk', 'no label',
                             
                             # tags are ambiguous and mapped to a less ambiguous similar label
                             #  'familyroom', 'lounge', 'toilet',
