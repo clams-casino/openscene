@@ -10,11 +10,15 @@ MATTERPORT_LABELS_21 = ('wall', 'floor', 'cabinet', 'bed', 'chair', 'sofa', 'tab
                     'shower curtain', 'toilet', 'sink', 'bathtub', 'other', 'ceiling')
 
 MATTERPORT_LABELS_REGIONS = ('bathroom', 'bedroom', 'closet', 'dining room', 'entryway/foyer/lobby', 
-                             'familyroom', 'garage', 'hallway', 'library', 'laundryroom/mudroom', 'kitchen', 
-                             'living room', 'meetingroom/conferenceroom', 'lounge', 'office', 
-                             'porch/terrace/deck/driveway', 'rec/game', 'stairs', 'toilet', 'utilityroom/toolroom', 
+                             'garage', 'hallway', 'library', 'laundryroom/mudroom', 'kitchen', 
+                             'living room', 'meetingroom/conferenceroom', 'office', 
+                             'porch/terrace/deck/driveway', 'rec/game', 'stairs', 'utilityroom/toolroom', 
                              'tv', 'workout/gym/exercise', 'outdoor', 'balcony', 'bar', 'classroom', 'dining booth', 
-                             'spa/sauna', 'other room', 'junk', 'no label')
+                             'spa/sauna', 'other room', 'junk', 'no label',
+                            
+                            # tags are ambiguous and mapped to a less ambiguous similar label
+                            #  'familyroom', 'lounge', 'toilet',
+)
 
 
 MATTERPORT_LABELS_40 = ('wall', 'door', 'ceiling', 'floor', 'picture', 'window', 'chair',
