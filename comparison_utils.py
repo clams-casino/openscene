@@ -93,15 +93,17 @@ def get_region_features(
 
     # make sure fused features are normalized
     fused_feats = data_fused_feat["feat"]
-    fused_feats = (np.linalg.norm(fused_feats, axis=1, keepdims=True) + 1e-5)
+    fused_feats /= (fused_feats.norm(dim=1, keepdim=True) + 1e-5)
 
     # get 3D features from distill model
     distill_feats = disnet_runner.run(points)
 
-    fused_feats = torch.Tensor(fused_feats).to(torch.float16).to('cuda')
-    distill_feats.to(torch.float16).to('cuda')
-
-    return points, colors, fused_feats, distill_feats
+    return (
+        points,
+        colors,
+        fused_feats.to(torch.float16).to('cuda'),
+        distill_feats.to(torch.float16).to('cuda')
+    )
 
 
 
