@@ -9,7 +9,7 @@ MATTERPORT_LABELS_21 = ('wall', 'floor', 'cabinet', 'bed', 'chair', 'sofa', 'tab
                     'window', 'bookshelf', 'picture', 'counter', 'desk', 'curtain', 'refrigerator',
                     'shower curtain', 'toilet', 'sink', 'bathtub', 'other', 'ceiling')
 
-MATTERPORT_LABELS_REGIONS = ('bathroom', 'bedroom', 'closet', 'dining room', , 
+MATTERPORT_LABELS_REGIONS = ('bathroom', 'bedroom', 'closet', 'dining room',
                              'garage', 'hallway', 'library', 'laundry room or mudroom', 'kitchen', 
                              'living room', 'meeting room or conference room', 'office', 
                              'porch or terrace or deck or driveway', 'rec/game', 'stairs', 'utility room or tool room', 
