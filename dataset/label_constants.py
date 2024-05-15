@@ -12,7 +12,7 @@ MATTERPORT_LABELS_21 = ('wall', 'floor', 'cabinet', 'bed', 'chair', 'sofa', 'tab
 MATTERPORT_LABELS_REGIONS = ('bathroom', 'bedroom', 'closet', 'dining room',
                              'garage', 'hallway', 'library', 'laundry room or mudroom', 'kitchen', 
                              'living room', 'meeting room or conference room', 'office', 
-                             'porch or terrace or deck or driveway', 'rec/game', 'stairs', 'utility room or tool room', 
+                             'porch or terrace or deck or driveway', 'recreation or game room', 'stairs', 'utility room or tool room', 
                              'cinema or home theater or theater', 'gym', 'balcony', 'bar', 'classroom',
                              'spa or sauna', 
                              
