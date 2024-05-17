@@ -55,22 +55,73 @@ HABITAT_OGN_LABELS = (
 
 
 
+MATTERPORT_LABELS_REGIONS_TO_TEXT_PROMPT = {
+    # Matterport regions labels along with 'other room' category
+    "bathroom": ["bathroom"],
+    "bedroom": ["bedroom"],
+    "closet": ["closet"],
+    "dining room": ["dining room"],
+    "garage": ["garage"],
+    "hallway": ["hallway"],
+    "library": ["library"],
+    "laundryroom/mudroom": ["laundry room or mudroom"],  
+    "kitchen": ["kitchen"],
+    "living room": ["living room"],
+    "meetingroom/conferenceroom": ["meeting room or conference room"],
+    "office": ["office"],
+    "porch/terrace/deck/driveway": ["porch or terrace or deck or driveway"],
+    "rec/game": ["recreation or game room"],
+    "stairs": ["stairs"],
+    "utilityroom/toolroom": ["utility room or tool room"],
+    "tv": ["cinema or home theater or theater"],
+    "workout/gym/exercise": ["gym"],
+    "balcony": ["balcony"],
+    "bar": ["bar"],
+    "classroom": ["classroom"],
+    "spa/sauna": ["spa or sauna"],
 
 
-MATTERPORT_LABELS_REGIONS = ('bathroom', 'bedroom', 'closet', 'dining room',
-                             'garage', 'hallway', 'library', 'laundry room or mudroom', 'kitchen', 
-                             'living room', 'meeting room or conference room', 'office', 
-                             'porch or terrace or deck or driveway', 'recreation or game room', 'stairs', 'utility room or tool room', 
-                             'cinema or home theater or theater', 'gym', 'balcony', 'bar', 'classroom',
-                             'spa or sauna', 
-                             
-                             # these labels are blacklisted later in the evaluation
-                             # but we still want to query with them!
-                             # so they're NOT commented out
-                             'other room', 'junk', 'no label',
-                             'dining booth', 'entryway/foyer/lobby', 'outdoor',
+    ### Following labels are blacklisted but query them in the text prompt anyways
+    "entryway/foyer/lobby": ["entryway or foyer or lobby"], 
+    "outdoor": ["outdoor"],
+    "dining booth": ["dining booth"],
 
-                            # these labels are ambiguous and mapped to a less ambiguous similar label
-                            #  'familyroom', 'lounge', 'toilet',
+    "other room": ["other room"],
+
+
+    # Following labels are mapped into less ambiguous labels
+    # "louge" -> "living room"
+    # "familyroom" -> "living room"
+    # "toilet" -> "bathroom"
+}
+
+MATTERPORT_LABELS_REGIONS = (
+    "bathroom",
+    "bedroom",
+    "closet",
+    "dining room",
+    "garage",
+    "hallway",
+    "library",
+    "laundryroom/mudroom",
+    "kitchen",
+    "living room",
+    "meetingroom/conferenceroom",
+    "office",
+    "porch/terrace/deck/driveway",
+    "rec/game",
+    "stairs",
+    "utilityroom/toolroom",
+    "tv",
+    "workout/gym/exercise",
+    "balcony",
+    "bar",
+    "classroom",
+    "spa/sauna",
+
+    "entryway/foyer/lobby",
+    "outdoor",
+    "dining booth",
+
+    "other room",
 )
-
