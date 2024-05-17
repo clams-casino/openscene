@@ -27,6 +27,32 @@ HABITAT_OGN_LABEL_TO_TEXT_PROMPT_MAPPINGS = {
     "other": ["other in a scene"],
 }
 
+HABITAT_OGN_LABELS = (
+    "chair",
+    "table",
+    "picture",
+    "cabinet",
+    "cushion",
+    "sofa",
+    "bed",
+    "chest_of_drawers",
+    "plant",
+    "sink",
+    "toilet",
+    "stool",
+    "towel",
+    "tv_monitor",
+    "shower",
+    "bathtub",
+    "counter",
+    "fireplace",
+    "gym_equipment",
+    "seating",
+    "clothes",
+
+    "other",
+)
+
 
 
 
