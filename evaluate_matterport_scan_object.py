@@ -91,8 +91,6 @@ def evaluate_matterport_scan_object_localizations(
     )
     logger.info(f"loaded lattice graph from {lattice_graph_path}")
 
-
-
     # Aggregate region segmentations for the scan
     points, colors, preds = ([], [], [])
     label_to_pred_ind = None
@@ -114,10 +112,6 @@ def evaluate_matterport_scan_object_localizations(
     colors = np.concatenate(colors, axis=0)
     preds = np.concatenate(preds, axis=0)
 
-    # print(points.shape)
-    # print(preds.shape)
-    # print(label_to_pred_ind)
-
     logger.info(f"aggregated region segmentations")
 
     # Run localization for each label
@@ -137,9 +131,6 @@ def evaluate_matterport_scan_object_localizations(
         if label not in label_to_pred_ind.keys():
             continue
 
-
-        # print(label)
-
         pred_ind = label_to_pred_ind[label]
         label_points = points[preds == pred_ind]
 
@@ -147,8 +138,6 @@ def evaluate_matterport_scan_object_localizations(
         label_pcd.points = o3d.utility.Vector3dVector(label_points)
 
         cluster_inds = label_pcd.cluster_dbscan(**params["dbscan_params"])
-
-        # print(np.unique(cluster_inds))
 
         p_boxes, p_box_confidences, p_box_tags = ([], [], [])
         for i in np.unique(cluster_inds):
@@ -172,8 +161,6 @@ def evaluate_matterport_scan_object_localizations(
             "confidences": p_box_confidences,
             "tags": p_box_tags,
         }
-
-    # print(label_proposals)
 
     logger.info(f"finished running localization pipeline")
 
@@ -214,9 +201,6 @@ def evaluate_matterport_scan_object_localizations(
             )
             p_boxes_lattice_inds.append(inds)
         proposals["lattice_inds"] = p_boxes_lattice_inds
-
-        # print(label)
-        # print(p_boxes_lattice_inds)
 
     # print(label_gt_boxes)
     # print(label_lattice_inds)
@@ -402,7 +386,6 @@ def expand_box_to_min_side_length(box, min_side_length):
     min_bound -= expand_lengths
     return o3d.geometry.AxisAlignedBoundingBox(min_bound, max_bound)
     
-
 
 if __name__ == '__main__':
 
