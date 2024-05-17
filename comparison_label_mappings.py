@@ -1,28 +1,30 @@
-HABITAT_OGN_LABEL_MAPPINGS = {
+HABITAT_OGN_LABEL_TO_TEXT_PROMPT_MAPPINGS = {
     # 21 habitat object goal nav categories along with 'other' category
-    "chair": ["chair"],
-    "table": ["table"],
-    "picture": ["picture"],
-    "cabinet": ["cabinet"],
-    "cushion": ["cushion"],
-    "sofa": ["sofa"],
-    "bed": ["bed"],
-    "chest_of_drawers": ["chest of drawers"],
-    "plant": ["plant"],
-    "sink": ["sink"],
-    "toilet": ["toilet"],
-    "stool": ["stool"],
-    "towel": ["towel"],
-    "tv_monitor": ["television monitor"],
-    "shower": ["shower"],
-    "bathtub": ["bathtub"],
-    "counter": ["counter"],
-    "fireplace": ["fireplace"],
-    "gym_equipment": ["gym equipment"],
-    "seating": ["seating"],
-    "clothes": ["clothes"],
+    # Map each raw label to a "gramatically correct" text prompt to be encoded
+    # by the text embedding model
+    "chair": ["a chair in a scene"],
+    "table": ["a table in a scene"],
+    "picture": ["a picture in a scene"],
+    "cabinet": ["a cabinet in a scene"],
+    "cushion": ["a cushion in a scene"],
+    "sofa": ["a sofa in a scene"],
+    "bed": ["a bed in a scene"],
+    "chest_of_drawers": ["a chest of drawers in a scene"],
+    "plant": ["a plant in a scene"],
+    "sink": ["a sink in a scene"],
+    "toilet": ["a toilet in a scene"],
+    "stool": ["a stool in a scene"],
+    "towel": ["a towel in a scene"],
+    "tv_monitor": ["a television monitor in a scene"],
+    "shower": ["a shower in a scene"],
+    "bathtub": ["a bathtub in a scene"],
+    "counter": ["a counter in a scene"],
+    "fireplace": ["a fireplace in a scene"],
+    "gym_equipment": ["gym equipment in a scene"],
+    "seating": ["seating in a scene"],
+    "clothes": ["clothes in a scene"],
 
-    "other": ["other"],
+    "other": ["other in a scene"],
 }
 
 
