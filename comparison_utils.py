@@ -94,24 +94,13 @@ from util.util import extract_clip_feature
 
 # Modified from original implementation in Openscene
 def extract_text_feature(
-    labelset, 
-    prompt_eng=True,
+    label_text_prompts, 
     feature_2d_extractor='openseg',
-    dataset='matterport_3d'
 ):
-    if prompt_eng:
-        print('Use prompt engineering: a XX in a scene')
-        labelset = [ "a " + label + " in a scene" for label in labelset]
-        
-        if dataset == 'scannet_3d':
-            labelset[-1] = 'other'
-        if dataset == 'matterport_3d':
-            labelset[-2] = 'other'
-            
     if 'lseg' in feature_2d_extractor:
-        text_features = extract_clip_feature(labelset)
+        text_features = extract_clip_feature(label_text_prompts)
     elif 'openseg' in feature_2d_extractor:
-        text_features = extract_clip_feature(labelset, model_name="ViT-L/14@336px")
+        text_features = extract_clip_feature(label_text_prompts, model_name="ViT-L/14@336px")
     else:
         raise NotImplementedError
 
