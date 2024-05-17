@@ -1,4 +1,4 @@
-HABITAT_OGN_LABEL_TO_TEXT_PROMPT_MAPPINGS = {
+HABITAT_OGN_LABEL_TO_TEXT_PROMPT = {
     # 21 habitat object goal nav categories along with 'other' category
     # Map each raw label to a "gramatically correct" text prompt to be encoded
     # by the text embedding model
