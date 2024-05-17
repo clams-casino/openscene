@@ -55,7 +55,7 @@ HABITAT_OGN_LABELS = (
 
 
 
-MATTERPORT_LABELS_REGIONS_TO_TEXT_PROMPT = {
+MATTERPORT_REGION_LABELS_TO_TEXT_PROMPT = {
     # Matterport regions labels along with 'other room' category
     "bathroom": ["bathroom"],
     "bedroom": ["bedroom"],
@@ -95,7 +95,7 @@ MATTERPORT_LABELS_REGIONS_TO_TEXT_PROMPT = {
     # "toilet" -> "bathroom"
 }
 
-MATTERPORT_LABELS_REGIONS = (
+MATTERPORT_REGION_LABELS = (
     "bathroom",
     "bedroom",
     "closet",
