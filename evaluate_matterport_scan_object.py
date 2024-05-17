@@ -392,7 +392,7 @@ if __name__ == '__main__':
     SCAN_DIR = "/media/rsl_admin/T7/matterport/data/v1/scans/2t7WUuJeko7/2t7WUuJeko7"
     OPENSCENE_REGION_SEGS_DIR = "/home/rsl_admin/openscene/comparison_outputs/segmentations/object-openseg-matterport-test"
     LATTICE_GRAPH_PATH = "/media/rsl_admin/T7/matterport/lattice_graphs/2t7WUuJeko7_lattice_graph.pkl"
-    OUTPUT_DIR = "/home/rsl_admin/openscene/comparison_outputs/test_eval_outputs"
+    OUTPUT_DIR = "/home/rsl_admin/openscene/comparison_outputs/test_eval_outputs/object"
 
     params = {
         "label_params": {

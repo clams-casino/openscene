@@ -110,11 +110,6 @@ def evaluate_matterport_scan_region_localizations(
     colors = np.concatenate(colors, axis=0)
     preds = np.concatenate(preds, axis=0)
 
-    # print(points.shape)
-    # print(preds.shape)
-    # print(label_to_pred_ind)
-
-
     logger.info(f"aggregated region segmentations")
 
     # Run localization for each label
@@ -133,9 +128,6 @@ def evaluate_matterport_scan_region_localizations(
         """
         if label not in label_to_pred_ind.keys():
             continue
-
-        # print(label)
-
 
         pred_ind = label_to_pred_ind[label]
         label_points = points[preds == pred_ind]
@@ -167,9 +159,6 @@ def evaluate_matterport_scan_region_localizations(
             "confidences": p_box_confidences,
             "tags": p_box_tags,
         }
-
-    # print(label_proposals)
-
 
     logger.info(f"finished running localization pipeline")
 
