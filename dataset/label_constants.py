@@ -9,24 +9,6 @@ MATTERPORT_LABELS_21 = ('wall', 'floor', 'cabinet', 'bed', 'chair', 'sofa', 'tab
                     'window', 'bookshelf', 'picture', 'counter', 'desk', 'curtain', 'refrigerator',
                     'shower curtain', 'toilet', 'sink', 'bathtub', 'other', 'ceiling')
 
-MATTERPORT_LABELS_REGIONS = ('bathroom', 'bedroom', 'closet', 'dining room',
-                             'garage', 'hallway', 'library', 'laundry room or mudroom', 'kitchen', 
-                             'living room', 'meeting room or conference room', 'office', 
-                             'porch or terrace or deck or driveway', 'recreation or game room', 'stairs', 'utility room or tool room', 
-                             'cinema or home theater or theater', 'gym', 'balcony', 'bar', 'classroom',
-                             'spa or sauna', 
-                             
-                             # these labels are blacklisted later in the evaluation
-                             # but we still want to query with them!
-                             # so they're NOT commented out
-                             'other room', 'junk', 'no label',
-                             'dining booth', 'entryway/foyer/lobby', 'outdoor',
-
-                            # these labels are ambiguous and mapped to a less ambiguous similar label
-                            #  'familyroom', 'lounge', 'toilet',
-)
-
-
 MATTERPORT_LABELS_40 = ('wall', 'door', 'ceiling', 'floor', 'picture', 'window', 'chair',
                 'pillow', 'lamp', 'cabinet', 'curtain', 'table', 'plant', 'mirror',
                 'towel', 'sink', 'shelves', 'sofa', 'bed', 'night stand', 'toilet', 'column',
