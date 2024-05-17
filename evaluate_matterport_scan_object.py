@@ -127,7 +127,13 @@ def evaluate_matterport_scan_object_localizations(
         if label in params["label_params"]["blacklisted_labels"]:
             continue
 
-        # TODO why do we need this check here?
+        """
+        Some labeled categories in the scene may not be in the object categories we are evaluating on,
+        so we skip them.
+
+        NOTE: For the tag map evaluation we didn't do this, we tried to process all labels categories
+        in the scene and post-process the results to only consider the object categories.
+        """
         if label not in label_to_pred_ind.keys():
             continue
 
@@ -175,7 +181,13 @@ def evaluate_matterport_scan_object_localizations(
     label_lattice_inds = {}
     for label, gt_boxes in label_gt_boxes.items():
 
-        # TODO here why do we also put this check here?
+        """
+        Some labeled categories in the scene may not be in the object categories we are evaluating on,
+        so we skip them.
+
+        NOTE: For the tag map evaluation we didn't do this, we tried to process all labels categories
+        in the scene and post-process the results to only consider the object categories.
+        """
         if label not in label_to_pred_ind.keys():
             continue
 
