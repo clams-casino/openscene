@@ -143,6 +143,10 @@ def evaluate_matterport_scan_object_localizations(
         for i in np.unique(cluster_inds):
             if i == -1:
                 continue
+
+            # Reject cluster if it contains less than the minimum number of points
+            if np.sum(cluster_inds == i) < params["cluster_min_points"]:
+                continue
             
             cluster_points = label_pcd.select_by_index(
                 np.where(cluster_inds == i)[0]
@@ -401,10 +405,16 @@ if __name__ == '__main__':
                 "wall", "floor", "ceiling", "other"
             )
         },
+
+        # From email with the author of OVIR
+        "cluster_min_points": 50,
+
         "min_proposal_box_length": 0.1,
+
+        # https://github.com/search?q=repo%3Ashiyoung77%2FOVIR-3D%20dbscan&type=code
         "dbscan_params": {
             "eps": 0.1,
-            "min_points": 50,
+            "min_points": 1,
             "print_progress": False,
         },
     }

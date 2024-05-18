@@ -142,6 +142,10 @@ def evaluate_matterport_scan_region_localizations(
             if i == -1:
                 continue
             
+            # Reject cluster if it contains less than the minimum number of points
+            if np.sum(cluster_inds == i) < params["cluster_min_points"]:
+                continue
+
             cluster_points = label_pcd.select_by_index(
                 np.where(cluster_inds == i)[0]
             )
@@ -403,10 +407,16 @@ if __name__ == '__main__':
                 "outdoor",
             )
         },
+        
+        # From email with the author of OVIR
+        "cluster_min_points": 50,
+
         "min_proposal_box_length": 0.1,
+
+        
         "dbscan_params": {
             "eps": 0.5,
-            "min_points": 50,
+            "min_points": 1,
             "print_progress": False,
         },
     }
